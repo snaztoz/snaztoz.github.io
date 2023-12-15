@@ -1,0 +1,27 @@
+baseURL = "https://snaztoz.com/"
+copyright = "© 2023 Hafidh Muqsithanova Sukarno"
+languageCode = "in"
+title = "snaztoz.com"
+theme = "hugo-bearcub"
+
+enableRobotsTXT = true
+
+[author]
+    name = "Hafidh Muqsithanova Sukarno"
+
+[params]
+    title = "snaztoz.com"
+    description = "Hafidh's (a.k.a. snaztoz) personal website"
+    dateFormat = "2 Jan 2006"
+
+    [social]
+        email = "hafidhmn@gmail.com" # Added to the footer so readers can reply to posts
+
+[markup]
+    [markup.highlight]
+        lineNos = true
+        lineNumbersInTable = false
+        # This allows Bear Cub to use a variation of Dracula that is more accessible
+        # to people with poor eyesight. For more information about color contrast
+        # and accessibility, see https://web.dev/color-and-contrast-accessibility/
+        noClasses = false
