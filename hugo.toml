@@ -15,7 +15,7 @@ enableRobotsTXT = true
     dateFormat = "2 Jan 2006"
 
     [social]
-        email = "hafidhmn@gmail.com" # Added to the footer so readers can reply to posts
+        email = "snaztoz@gmail.com" # Added to the footer so readers can reply to posts
 
 [markup]
     [markup.highlight]
