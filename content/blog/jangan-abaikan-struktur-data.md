@@ -1,9 +1,11 @@
-+++
-title = 'Jangan Abaikan Struktur Data'
-date = 2023-12-15T20:54:45+07:00
-draft = false
-tags = ['DataStructure']
-+++
+---
+title: Jangan Abaikan Struktur Data
+description: Struktur data dapat meningkatkan ataupun menurunkan performa sebuah software. Jangan abaikan konsep ini!
+date: '2023-12-15T20:54:45+07:00'
+draft: false
+tags:
+- data-structure
+---
 
 Ya, pada kebanyakan kasus mungkin kita hanya akan perlu menggunakan [array ataupun hashmap](https://doc.rust-lang.org/std/collections/).
 

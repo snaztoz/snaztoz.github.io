@@ -1,9 +1,11 @@
-+++
-title = 'Saya Membuat Sebuah Bahasa Pemrograman'
-date = 2023-12-27T17:38:39+07:00
-draft = false
-tags = ['ProgrammingLanguage']
-+++
+---
+title: Saya Membuat Sebuah Bahasa Pemrograman
+description: Baca tentang mengapa saya membuat project ini dan dimana project ini bisa didapatkan.
+date: '2023-12-27T17:38:39+07:00'
+draft: false
+tags:
+- programming-language
+---
 
 Saya selalu ingin membuat bahasa pemrograman milik saya sendiri.
 
