@@ -2,7 +2,7 @@
 title: Kaba Versi 0.2.1 Rilis🎉
 description:
 date: '2024-01-08T17:34:25+07:00'
-draft: true
+draft: false
 ---
 
 Yap, sesuai judul, Kaba versi 0.2.1 sudah rilis🎉.
