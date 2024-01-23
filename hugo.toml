@@ -25,3 +25,7 @@ enableRobotsTXT = true
         # to people with poor eyesight. For more information about color contrast
         # and accessibility, see https://web.dev/color-and-contrast-accessibility/
         noClasses = false
+
+[services]
+    [services.googleAnalytics]
+        ID = 'G-CJ56M35GV9'

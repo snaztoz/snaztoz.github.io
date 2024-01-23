@@ -1,8 +1,10 @@
 ---
 title: Kaba Versi 0.2.1 Rilis🎉
-description:
+description: Kaba versi 0.2.1 rilis, baca fitur-fitur baru selengkapnya di sini.
 date: '2024-01-08T17:34:25+07:00'
 draft: false
+tags:
+- programming-language
 ---
 
 Yap, sesuai judul, Kaba versi 0.2.1 sudah rilis🎉.
