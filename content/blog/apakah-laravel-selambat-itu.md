@@ -74,13 +74,13 @@ Saya tidak melakukan custom setting apapun dan hanya menggunakan *development se
 
 Dapat dilihat, Laravel lambat *by-default*.
 
-Server hanya dapat menghandle 2,23 request/detik dengan rata-rata durasi tiap request adalah 450ms.
+Server hanya dapat menghandle 2,23 request/detik dengan rata-rata durasi tiap request adalah 450 ms.
 
 Berikut adalah log dari server:
 
 ![Retrieval Time Case #1](/images/202402/benchmark-laravel-case-1-retrieval-time.png "Waktu pengambilan data pada case #1")
 
-Waktu rata-rata *query* data sendiri membutuhkan waktu kurang lebih 350ms untuk tiap request, atau dengan kata lain **77,78%** waktu tiap request habis pada proses pengambilan data.
+Waktu rata-rata *query* data sendiri membutuhkan waktu kurang lebih 350 ms untuk tiap request, atau dengan kata lain **77,78%** waktu tiap request habis pada proses pengambilan data.
 
 Untuk mengatasi problem ini, cukup jelas kita perlu mengurangi waktu dalam tahap *query* data itu sendiri.
 
@@ -92,13 +92,13 @@ Di case ini saya menambahkan mekanisme *caching* di dalam server (menggunakan [*
 
 Hasil menunjukkan bahwa dengan menggunakan *cache*, server kini dapat menghandle *load* sebesar 11 request/detik.
 
-Sedangkan waktu rata-rata request menurun menjadi 89,74ms, atau sekitar **19,78%** dari waktu yang dibutuhkan case sebelumnya.
+Sedangkan waktu rata-rata request menurun menjadi 89,74 ms, atau sekitar **19,78%** dari waktu yang dibutuhkan case sebelumnya.
 
 Tidak buruk!
 
 ![Retrieval Time Case #2](/images/202402/benchmark-laravel-case-2-retrieval-time.png "Waktu pengambilan data pada case #2")
 
-Waktu rata-rata *query* data sendiri menurun ke kisaran 6ms, atau sekitar **1,71%** dari waktu yang dibutuhkan server pada case #1!
+Waktu rata-rata *query* data sendiri menurun ke kisaran 6 ms, atau sekitar **1,71%** dari waktu yang dibutuhkan server pada case #1!
 
 Hal ini dapat terjadi karena server tidak perlu lagi untuk melakukan *query* database di setiap request-nya.
 
@@ -115,7 +115,7 @@ Hasil setelah menggunakan *package* ini adalah seperti berikut:
 
 Server kini dapat menghandle hingga **261 request/detik**!🤯
 
-Dengan waktu rata-rata per requestnya sendiri adalah 2,96 detik, atau sekitar **0,53%** dari waktu yang dibutuhkan server pada case #1.
+Dengan waktu rata-rata per requestnya sendiri adalah 2,96 ms, atau sekitar **0,53%** dari waktu yang dibutuhkan server pada case #1.
 
 ![Retrieval Time Case #3](/images/202402/benchmark-laravel-case-3-retrieval-time.png "Waktu pengambilan data pada case #3")
 
