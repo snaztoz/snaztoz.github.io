@@ -1,5 +1,5 @@
 baseURL = "https://snaztoz.com/"
-copyright = "© 2023 Hafidh Muqsithanova Sukarno"
+copyright = "© 2024 Hafidh Muqsithanova Sukarno"
 languageCode = "in"
 title = "snaztoz.com"
 theme = "hugo-bearcub"
@@ -13,6 +13,7 @@ enableRobotsTXT = true
     title = "snaztoz.com"
     description = "Hafidh's (a.k.a. snaztoz) personal website"
     dateFormat = "2 Jan 2006"
+    madeWith = "Made with [Hugo](https://gohugo.io/)🏭 and [Bear Cub Theme](https://clente.github.io/hugo-bearcub/)🐻"
 
     [social]
         email = "snaztoz@gmail.com" # Added to the footer so readers can reply to posts
