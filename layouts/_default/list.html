@@ -16,7 +16,7 @@
           </header>
           <p class="text-gray-700">{{ .Param "description" }}</p>
           <time
-              datetime="{{ .Date.Format "2006-01-02" }}"
+              datetime='{{ .Date.Format "2006-01-02" }}'
               pubdate
               class="text-base text-gray-500 italic">
             {{ .Date.Format (default "2006-01-02" .Site.Params.dateFormat) }}
