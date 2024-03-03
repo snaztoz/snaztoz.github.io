@@ -1,0 +1,9 @@
+<nav class="text-sm text-gray-500">
+  {{ range .Ancestors.Reverse }}
+    <a href="{{ .RelPermalink }}" class="underline text-blue-500 hover:text-blue-600">
+      {{ .Title }}
+    </a>
+    &rsaquo;
+  {{ end }}
+  <span>{{ .Title }}</span>
+</nav>

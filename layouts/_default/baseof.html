@@ -18,13 +18,15 @@
       {{ $styles := $styles | minify | fingerprint | resources.PostProcess }}
       <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" />
     {{ end }}
-    <!-- <link rel="stylesheet" href="/static/css/bundle.css"> -->
-    <!-- <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet"> -->
+
+    <link rel="stylesheet" href="/css/highlight.css">
   </head>
 
   <body class="bg-slate-50">
     <div class="px-3 py-2 md:px-2 md:py-4 md:w-2/3 lg:w-1/2 mx-auto md:text-lg">
+      {{- partial "header.html" . -}}
       {{- block "main" . }}{{- end }}
+      {{- partial "footer.html" . -}}
     </div>
   </body>
 </html>

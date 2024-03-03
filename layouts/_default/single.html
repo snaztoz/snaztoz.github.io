@@ -1,0 +1,39 @@
+{{ define "main" }}
+  <main>
+    <div class="my-4">
+      {{- partial "breadcrumbs.html" . -}}
+    </div>
+
+    <article class="py-2 flex flex-col gap-8">
+      <header class="flex flex-col gap-4">
+        <h1 class="text-4xl font-semibold">{{ .Title }}</h1>
+        <time
+            datetime="{{ .Date.Format "2006-01-02" }}"
+            pubdate
+            class="text-base text-gray-500 italic">
+          {{ .Date.Format (default "2006-01-02" .Site.Params.dateFormat) }}
+        </time>
+        <section class="flex flex-wrap gap-2">
+          {{ range .Param "tags" }}
+            <span class="px-3 py-1 bg-orange-100 text-gray-700 rounded-lg text-sm">
+              {{ . }}
+            </span>
+          {{ end }}
+        </section>
+      </header>
+
+      <section
+          class="flex flex-col gap-6
+            prose:lg prose-h2:text-3xl prose-h2:font-semibold prose-h3:text-2xl
+            prose-h3:font-semibold prose-h4:text-xl prose-h4:font-semibold
+            prose-ol:list-decimal prose-ol:list-outside prose-ul:list-disc
+            prose-ul:list-outside prose-li:ml-8 prose-li:pl-2
+            prose-blockquote:p-3 prose-blockquote:rounded
+            prose-blockquote:bg-pink-200 prose-blockquote:italic prose-a:underline
+            prose-a:text-blue-500 hover:prose-a:text-blue-600
+            prose-pre:overflow-x-scroll">
+        {{ .Content }}
+      </section>
+    </article>
+  </main>
+{{ end }}
