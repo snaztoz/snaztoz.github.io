@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{- block "title" . }}{{ with .Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{- end }}</title>
+
+    <link rel="icon" type="image/x-icon" href="/static/icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/icons/favicon-16x16.png">
+    <link rel="manifest" href="/static/icons/site.webmanifest">
+
+    {{ $styles := resources.Get "css/style.css" | postCSS }}
+    {{ if .Site.IsServer }}
+      <link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
+    {{ else }}
+      {{ $styles := $styles | minify | fingerprint | resources.PostProcess }}
+      <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" />
+    {{ end }}
+    <!-- <link rel="stylesheet" href="/static/css/bundle.css"> -->
+    <!-- <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet"> -->
+  </head>
+
+  <body class="bg-slate-50">
+    <div class="px-3 py-2 md:px-2 md:py-4 md:w-2/3 lg:w-1/2 mx-auto md:text-lg">
+      {{- block "main" . }}{{- end }}
+    </div>
+  </body>
+</html>

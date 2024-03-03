@@ -2,7 +2,7 @@ baseURL = "https://snaztoz.com/"
 copyright = "© 2024 Hafidh Muqsithanova Sukarno"
 languageCode = "in"
 title = "snaztoz.com"
-theme = "hugo-bearcub"
+#theme = "hugo-bearcub"
 
 enableRobotsTXT = true
 
