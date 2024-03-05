@@ -1,8 +1,9 @@
 ---
 title: Jangan Abaikan Struktur Data
-description: Struktur data dapat meningkatkan ataupun menurunkan performa sebuah software. Jangan abaikan konsep ini!
+description: Alasan mengapa struktur data dapat meningkatkan ataupun menurunkan performa sebuah software.
 date: '2023-12-15T20:54:45+07:00'
 draft: false
+categories: ['Blog']
 tags:
 - data-structure
 ---

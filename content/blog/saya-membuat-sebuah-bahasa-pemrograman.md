@@ -1,8 +1,9 @@
 ---
 title: Saya Membuat Sebuah Bahasa Pemrograman
-description: Baca tentang mengapa saya membuat project ini dan dimana project ini bisa didapatkan.
+description: Saya membuat sebuah bahasa pemrograman sederhana yang memiliki static-typing. Baca selengkapnya di sini.
 date: '2023-12-27T17:38:39+07:00'
 draft: false
+categories: ['Blog']
 tags:
 - programming-language
 ---
@@ -35,7 +36,7 @@ Sangat terbatas memang, tapi bahasa ini sudah bisa bekerja😁.
 
 Berikut ini contoh sebuah program Kaba untuk melakukan *value swapping* variabel:
 
-```
+```text
 var x = 15;
 var y = 50;
 

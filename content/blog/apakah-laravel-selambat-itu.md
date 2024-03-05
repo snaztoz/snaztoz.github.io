@@ -1,8 +1,9 @@
 ---
 title: Apakah Laravel Selambat Itu?🤔
-description: Saya melakukan benchmarking Laravel untuk membuktikan apakah benar Laravel selambat itu
+description: Sebuah benchmarking web framework Laravel untuk membuktikan apakah benar Laravel selambat rumor yang dikatakan banyak orang.
 date: '2024-02-26T15:52:50+07:00'
 draft: false
+categories: ['Blog']
 tags:
 - benchmark
 - cache
@@ -12,13 +13,13 @@ tags:
 
 Beberapa kali saya mendengar komplain orang terkait lambatnya *framework* yang satu ini.
 
-Saya pribadi menyukai framework Laravel. Fiturnya lengkap, package banyak, development pun juga cepat.
+Saya pribadi menyukai framework [Laravel](https://laravel.com/). Fiturnya lengkap, package banyak, development pun juga cepat.
 
-Tapi, kini trend sudah mulai bergeser. Dengan alasan Laravel lambat, banyak programmer yang berpindah menggunakan teknologi lain seperti Golang ataupun Java Spring yang dikenal memiliki performa tinggi.
+Tapi, kini trend sudah mulai bergeser. Dengan alasan *framework* Laravel yang lambat, banyak programmer yang berpindah menggunakan teknologi lain seperti Golang ataupun Java Spring yang dikenal memiliki performa tinggi.
 
 Hal ini membuat saya bertanya-tanya: benarkah Laravel selambat itu?
 
-Untuk menjawab hal ini, saya melakukan *benchmarking*, dan hasilnya saya bagikan di artikel ini.
+Untuk menjawab hal ini, saya melakukan *benchmarking*, dan hasilnya saya bagikan di bawah ini.
 
 ## ❓ Mengapa saya melakukan *benchmarking*?
 
@@ -107,7 +108,7 @@ Hal ini dapat terjadi karena server tidak perlu lagi untuk melakukan *query* dat
 Jika *package* ini terdengar asing, singkatnya dengan menggunakan Laravel Octane server akan dapat menghandle request dengan lebih cepat, dengan cara:
 
 1. [*Re-use*](https://laravel.com/docs/10.x/octane#introduction) aplikasi, sehingga Laravel tidak perlu melakukan *bootstrapping* aplikasi setiap kali ada request baru
-2. Menggunakan banyak [*worker*](https://laravel.com/docs/10.x/octane#specifying-the-worker-count) sesuai dengan jumlah CPU *core* dari komputer untuk menghandle request.
+2. Menggunakan banyak [*worker*](https://laravel.com/docs/10.x/octane#specifying-the-worker-count) sesuai dengan jumlah CPU *core* yang dimiliki komputer untuk menghandle request.
 
 Hasil setelah menggunakan *package* ini adalah seperti berikut:
 
@@ -152,13 +153,11 @@ Dan masih banyak yang lainnya...
 
 #### Apakah saya harus menggunakan Laravel?
 
-Tidak, gunakan *framework* yang developer kalian sudah nyaman menggunakannya.
+Tidak, gunakan *framework* yang kalian/developer kalian sendiri sudah nyaman menggunakannya.
 
-Golang? Tidak masalah.
-
-Java Spring? Aman juga.
-
-Express.js? Boleh.
+* Golang? Tidak masalah.
+* Java Spring? Aman juga.
+* Express.js? Boleh.
 
 Percobaan ini hanya bertujuan untuk membuktikan bahwa Laravel juga bisa memiliki performa tinggi jika terkonfigurasi dengan benar.
 
