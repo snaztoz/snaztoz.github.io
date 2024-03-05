@@ -27,6 +27,10 @@ enableRobotsTXT = true
         # and accessibility, see https://web.dev/color-and-contrast-accessibility/
         noClasses = false
 
+[outputs]
+    home = ['html', 'rss']
+    section = ['html', 'rss']
+
 [services]
     [services.googleAnalytics]
         ID = 'G-CJ56M35GV9'
