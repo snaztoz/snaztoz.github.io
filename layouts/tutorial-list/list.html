@@ -24,13 +24,8 @@
               </h2>
             </header>
             <p class="text-gray-700">{{ .Param "description" }}</p>
-            <section class="flex flex-wrap gap-2">
-              {{ range .Param "tags" }}
-                <span class="px-3 py-1 bg-green-200 text-gray-700 rounded-lg text-sm">
-                  {{ . }}
-                </span>
-              {{ end }}
-            </section>
+
+            {{- partial "tags.html" .Params.tags -}}
           </div>
         </article>
       {{ end }}

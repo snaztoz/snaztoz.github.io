@@ -1,0 +1,10 @@
+<section class="flex flex-wrap gap-2">
+  {{ range . }}
+    <a
+        href="/tags/{{ . }}"
+        class="px-3 py-1 bg-orange-100 text-gray-700 rounded-lg text-sm
+          cursor-pointer hover:bg-orange-200">
+      {{ . }}
+    </a>
+  {{ end }}
+</section>

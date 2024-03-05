@@ -1,0 +1,30 @@
+{{ define "main" }}
+  <main>
+    <div class="my-4">
+      {{- partial "breadcrumbs.html" . -}}
+    </div>
+  </main>
+  <nav class="py-2">
+    <ul class="flex flex-col gap-8">
+      {{ range .Pages }}
+        <li class="flex flex-col gap-4 text-2xl">
+          <h2 class="text-xl">
+            {{ range .Ancestors.Reverse }}
+              <a href="{{ .RelPermalink }}" class="text-gray-500 hover:underline">
+                {{ .Title }}
+              </a>
+              &rsaquo;
+            {{ end }}
+            <a
+                href="{{ .RelPermalink }}"
+                class="font-semibold text-blue-500 hover:text-blue-600 hover:underline">
+              {{ .Title }}
+            </a>
+          </h2>
+
+          {{- partial "tags.html" .Params.tags -}}
+        </li>
+      {{ end }}
+    </ul>
+  </nav>
+{{ end }}

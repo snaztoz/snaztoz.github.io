@@ -11,6 +11,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
     <link rel="manifest" href="/icons/site.webmanifest">
 
+    {{- partial "seo-tags.html" . -}}
+
     {{ $styles := resources.Get "css/style.css" | postCSS }}
     {{ if .Site.IsServer }}
       <link rel="stylesheet" href="{{ $styles.RelPermalink }}" />

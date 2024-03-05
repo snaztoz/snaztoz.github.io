@@ -1,0 +1,17 @@
+{{ define "main" }}
+  <main>
+    <div class="my-4">
+      {{- partial "breadcrumbs.html" . -}}
+    </div>
+  </main>
+
+  <nav class="py-2 flex flex-wrap gap-4">
+    {{ range .Pages }}
+      <p class="text-xl font-semibold">
+        <a href="{{ .RelPermalink }}" class="text-blue-500 hover:text-blue-600 hover:underline">
+          #{{ .Title }}
+        </a>
+      </p>
+    {{ end }}
+  </nav>
+{{ end }}
